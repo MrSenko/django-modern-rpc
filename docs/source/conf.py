@@ -16,7 +16,7 @@ import warnings
 sys.path.insert(0, abspath(join(abspath(__file__), '../..')))
 
 try:
-    import sphinx_rtd_theme
+    import sphinx_rtd_theme  # noqa : F401
     sphinx_rtd = "sphinx_rtd_theme"
 except ImportError:
     # Use ReadTheDocs default theme only if it is installed.
@@ -24,8 +24,8 @@ except ImportError:
     warnings.warn("Please install 'sphinx_rtd_theme' in order to build the documentation")
     sphinx_rtd = None
 
-import modernrpc
-from django.conf import settings
+import modernrpc  # noqa: F402
+from django.conf import settings  # noqa: F402
 settings.configure()
 
 # -- Project information -----------------------------------------------------
