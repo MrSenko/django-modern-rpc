@@ -1,5 +1,5 @@
 =================
-Quick-start guide
+
 =================
 
 Configuring django-modern-rpc is quick and simple. Follow that steps to be up and running in few minutes!

@@ -1,6 +1,6 @@
-==============
-Authentication
-==============
+========================
+Configure authentication
+========================
 
 .. versionadded:: 0.5
 

@@ -30,7 +30,7 @@ can type::
 
 The file ``requirements.txt`` contains references to the following packages:
 
-.. literalinclude:: ../../requirements.txt
+.. literalinclude:: ../../../requirements.txt
 
 Installing ``pytest-django`` will trigger ``pytest`` and all its dependencies. In addition, ``requests`` and
 ``jsonrpcclient`` are used in some tests. ``flake8`` is used to control code quality and respect of PEP8 standards.
