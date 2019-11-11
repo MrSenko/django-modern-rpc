@@ -12,9 +12,8 @@ and pythonic API to expose a set of global functions to the outside world.
 Requirements
 ------------
 
-- Python 2.7, 3.3, 3.4, 3.5 or 3.6
-- Django 1.8 to 2.0
-- By default, no additional dependency is required
+- Python 2.7, 3.3+
+- Django 1.8+
 - Optionally, you may need to install ``markdown`` or ``docutils`` to support rich-text in your methods documentation.
 
 Main features
@@ -22,8 +21,8 @@ Main features
 
 **Multi-protocols support**
 
-The library supports both XML-RPC_ and `JSON-RPC 2.0`_ protocols. Please note that JSON-RPC 1.0 is not supported.
-The request's ``Content-Type`` is used to determine how incoming RPC call will be interpreted.
+Both XML-RPC_ and `JSON-RPC 2.0`_ protocols are supported. Please note that JSON-RPC 1.0 is not supported.
+The request's ``Content-Type`` is used to determine how incoming RPC call will be handled.
 
 .. _XML-RPC: http://xmlrpc.scripting.com/
 .. _JSON-RPC 2.0: http://www.jsonrpc.org/specification

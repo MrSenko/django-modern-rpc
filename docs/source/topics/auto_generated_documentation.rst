@@ -45,7 +45,6 @@ You can customize the documentation page by setting your own template. ``RPCEntr
 .. code-block:: python
 
     urlpatterns = [
-
         # Configure the RPCEntryPoint directly by passing some arguments to as_view() method
         url(r'^rpc/', RPCEntryPoint.as_view(
                           enable_doc=True,

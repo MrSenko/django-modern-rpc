@@ -1,5 +1,5 @@
 =================
-
+Quick-start guide
 =================
 
 Configuring django-modern-rpc is quick and simple. Follow that steps to be up and running in few minutes!
@@ -7,35 +7,30 @@ Configuring django-modern-rpc is quick and simple. Follow that steps to be up an
 Installation and configuration
 ==============================
 
-Use your preferred tool (pip, pipenv, pipsi, easy_install, requirements.txt file, etc.) to install package
-``django-modern-rpc`` in your environment:
+Install ``django-modern-rpc`` in your environment, using pip or any equivalent tool:
 
 .. code:: bash
 
     pip install django-modern-rpc
 
-Add ``modernrpc`` app to your Django applications, in ``settings.INSTALLED_APPS``:
+Add ``modernrpc`` app to your ``settings.INSTALLED_APPS``:
 
 .. code::
 
-    # in project's settings.py
     INSTALLED_APPS = [
         ...
         'modernrpc',
     ]
 
-Declare a RPC Entry Point in URLConf
-====================================
+Declare a RPC EntryPoint
+========================
 
-The entry point is a standard Django view class which mainly handle RPC calls. Like other Django views, you have
-to use ``django.conf.urls.url()`` to map URL pattern with this class. This can be done in your project's URLConf,
-or in any app specific one.
+The entrypoint is a special Django view which handle RPC calls. Like any other view, it has to
+be declared in URLConf or any app specific ``urls.py``:
 
 .. code::
 
-    # In myproject/my_app/urls.py
     from django.conf.urls import url
-
     from modernrpc.views import RPCEntryPoint
 
     urlpatterns = [
@@ -43,12 +38,12 @@ or in any app specific one.
         url(r'^rpc/', RPCEntryPoint.as_view()),
     ]
 
-Entry points behavior can be customized to your needs. Read :ref:`Entry point configuration` for full documentation.
+Entry points behavior can be customized to your needs. Read :ref:`Entrypoint configuration` for full documentation.
 
-Write and register your remote procedures
-=========================================
+Write a remote procedure
+========================
 
-Now, you have to write your remote procedures. These are global functions decorated with ``@rpc_method``.
+Remotes procedures are simple Python functions decorated with ``@rpc_method``.
 
 .. code:: python
 

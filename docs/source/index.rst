@@ -25,3 +25,9 @@ Django-modern-rpc
    internals/biblio.rst
    internals/contribute.rst
    internals/changelog.rst
+
+.. toctree::
+   :caption: Docs to improve
+   :maxdepth: 2
+
+   topics/loggers.rst
