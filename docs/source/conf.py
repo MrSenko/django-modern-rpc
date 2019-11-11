@@ -11,9 +11,9 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import sys
-from os.path import abspath, join
+from os.path import abspath, join, dirname
 import warnings
-sys.path.insert(0, abspath(join(abspath(__file__), '../..')))
+sys.path.insert(0, abspath(join(abspath(dirname(__file__)), '../..')))
 
 try:
     import sphinx_rtd_theme  # noqa : F401
